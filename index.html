@@ -17,16 +17,13 @@
 
   <meta name="description" content="Get As Real Estate offers 100% completed apartments at Summit 72 and luxury living in Kazanchis. Prices from 86,918 ETB/sqm. Call +251919549024." />
   <meta name="keywords" content="Get As Real Estate, Get As Real Estate Addis Ababa, Summit 72 apartments, Kazanchis luxury apartments, 100% completed houses Addis Ababa, real estate Ethiopia" />
-  <meta property="og:title" content="Get As Real Estate | Luxury Apartments in Addis Ababa" />
-  <meta property="og:description" content="100% completed apartments ready for handover. Own your home in Summit or Kazanchis today." />
-  <meta property="og:image" content="logo.png" />
-  <meta property="og:type" content="website" />
   <meta name="theme-color" content="#e31e24" />
 
   <style>
     :root{
       --brand-red:#e31e24;
       --dark-red:#b3141a;
+      --accent:#ffcc00; /* High visibility Gold */
       --bg:#0f0f12;
       --card:#1a1a1f;
       --card2:#25252b;
@@ -51,6 +48,48 @@
       line-height:1.6;
     }
 
+    /* --- STICKY HEADER & CALL BUTTON --- */
+    .top-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: flex-end;
+      background: rgba(15, 15, 18, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-visit-btn {
+      background: var(--accent);
+      color: #000;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 10px 22px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+      transition: transform 0.2s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .site-visit-btn:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.6); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 204, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0); }
+    }
+
+    /* --- MAIN CONTENT LAYOUT --- */
     .wrapper{
       width:100%;
       max-width:980px;
@@ -191,12 +230,6 @@
       color:var(--brand-red);
     }
 
-    .section p{
-      margin:0 0 14px;
-      color:var(--muted);
-      font-size:15px;
-    }
-
     .highlights{
       display:grid;
       grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
@@ -255,6 +288,7 @@
     }
 
     @media (max-width:640px){
+      .top-header { justify-content: center; }
       h1{ font-size:26px; }
       .container{ padding:24px 16px; }
     }
@@ -262,6 +296,12 @@
 </head>
 
 <body>
+  <header class="top-header">
+    <a href="tel:+251919549024" class="site-visit-btn">
+      <span>📍 CALL FOR SITE VISIT</span>
+    </a>
+  </header>
+
   <main class="wrapper">
     <section class="container">
       <div class="logo">
@@ -288,7 +328,7 @@
           <div>›</div>
         </a>
 
-        <a class="btn" href="https://wa.me/251919549024?text=Hello%20Get%20As%20Real%20Estate%2C%20I%20am%20interested%20in%20the%20Summit%20and%20Kazanchis%20apartments." target="_blank" rel="noopener">
+        <a class="btn" href="https://wa.me/251919549024?text=Hello%20Get%20As%20Real%20Estate..." target="_blank" rel="noopener">
           <div class="left">
             <div class="icon">💬</div>
             <span>WhatsApp Get As</span>
@@ -307,71 +347,48 @@
 
       <section class="section">
         <h2>Summit 72 Site (Gated Compound)</h2>
-        <p>A massive 42,000 sqm residential compound featuring 100% finished homes and flexible payment schedules.</p>
-        
         <div class="highlights">
           <div class="highlight">
             <strong>86,918 ETB</strong>
-            <span>Price per Square Meter</span>
+            <span>Price per sqm</span>
           </div>
           <div class="highlight">
             <strong>65% Down</strong>
-            <span>For 100% Completed units</span>
+            <span>For 100% Completed</span>
           </div>
           <div class="highlight">
             <strong>18 Months</strong>
-            <span>Interest-free balance</span>
+            <span>Interest-free</span>
           </div>
         </div>
 
         <div class="offer-box">
-          <h3>Unit Availability & Square Meters</h3>
+          <h3>Unit Availability</h3>
           <ul>
             <li><strong>1 Bedroom:</strong> 61 sqm & 65 sqm</li>
             <li><strong>2 Bedroom:</strong> 109, 115, & 116 sqm</li>
             <li><strong>3 Bedroom:</strong> 144, 147, & 150 sqm</li>
-            <li><strong>Status:</strong> Immediate move-in (100% Ready) or Under Construction (90% & 75%).</li>
+            <li><strong>Status:</strong> Immediate move-in ready.</li>
           </ul>
         </div>
       </section>
 
       <section class="section">
         <h2>Kazanchis Luxury Site (5B+G+25)</h2>
-        <p>Premium 25-story luxury high-rise in central Kazanchis with bank financing options.</p>
-
         <div class="highlights">
           <div class="highlight">
             <strong>99,378 ETB</strong>
-            <span>Price per Square Meter</span>
+            <span>Price per sqm</span>
           </div>
           <div class="highlight">
-            <strong>10% Pre-payment</strong>
-            <span>Secure your luxury unit</span>
+            <strong>10% Pre-pay</strong>
+            <span>Secure your unit</span>
           </div>
-          <div class="highlight">
+          <div class="highlight)
             <strong>50% Bank</strong>
             <span>Financing available</span>
           </div>
         </div>
-
-        <div class="offer-box">
-          <h3>Kazanchis Luxury Layouts</h3>
-          <ul>
-            <li><strong>2 Bedroom:</strong> 115, 116, 117, 132, & 149 sqm</li>
-            <li><strong>3 Bedroom:</strong> 137, 144, & 159 sqm</li>
-            <li><strong>Structure:</strong> 5 Basements + Ground + 25 Floors</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Why Get As Real Estate?</h2>
-        <p>
-          We prioritize delivery and transparency. With a fixed price guarantee and no hidden costs, our sites offer the highest standard of living in Addis Ababa.
-        </p>
-        <p style="font-weight:700; color:#fff;">
-          📞 Contact us at 0919549024 to book your site visit.
-        </p>
       </section>
 
       <footer>
